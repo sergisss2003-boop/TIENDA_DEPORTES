@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f5f7;
+    color: #1d1d1f;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.logo span {
+    color: #ff5a1f;
+}
+
+.nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ff5a1f;
+}
+
+.carrito {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff5a1f;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* ===== Hero ===== */
+.hero {
+    height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    background: linear-gradient(135deg, #111 0%, #2b2b2b 55%, #ff5a1f 100%);
+    color: #fff;
+}
+
+.hero-texto h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.hero-texto p {
+    font-size: 19px;
+    max-width: 480px;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+/* ===== Botones ===== */
+.btn {
+    display: inline-block;
+    background-color: #ff5a1f;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #e04812;
+    transform: scale(1.05);
+}
+
+/* ===== Secciones ===== */
+.categorias,
+.productos {
+    padding: 50px 40px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* ===== Categorías ===== */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.categoria {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    font-size: 42px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.categoria span {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== Productos ===== */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-imagen {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    background: linear-gradient(135deg, #ffe3d6, #fff3ec);
+}
+
+.tarjeta-info {
+    padding: 20px;
+}
+
+.tarjeta-categoria {
+    font-size: 13px;
+    color: #ff5a1f;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tarjeta-info h3 {
+    margin: 8px 0;
+    font-size: 19px;
+}
+
+.precio {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.btn-tarjeta {
+    width: 100%;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 30px;
+    line-height: 1.8;
+}
+
+.footer strong {
+    color: #ff5a1f;
+}
+
+.copy {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 0 25px;
+        height: 340px;
+    }
+
+    .hero-texto h1 {
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportZone | Ropa Deportiva</title>
+    <link rel="stylesheet" href="{% static 'tienda/css/styles.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">Sport<span>Zone</span></div>
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <a href="#" class="carrito">🛒 Carrito (0)</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-texto">
+            <h1>Supera tus límites</h1>
+            <p>Ropa deportiva diseñada para rendir al máximo en cada entrenamiento.</p>
+            <a href="#productos" class="btn">Ver productos</a>
+        </div>
+    </section>
+
+    <section class="categorias" id="categorias">
+        <h2>Categorías</h2>
+        <div class="categorias-grid">
+            <div class="categoria">👕<span>Camisetas</span></div>
+            <div class="categoria">🩳<span>Shorts</span></div>
+            <div class="categoria">👟<span>Calzado</span></div>
+            <div class="categoria">🧢<span>Accesorios</span></div>
+        </div>
+    </section>
+
+    <section class="productos" id="productos">
+        <h2>Productos destacados</h2>
+        <div class="productos-grid">
+            {% for producto in productos %}
+            <div class="tarjeta">
+                <div class="tarjeta-imagen">{{ producto.icono }}</div>
+                <div class="tarjeta-info">
+                    <span class="tarjeta-categoria">{{ producto.categoria }}</span>
+                    <h3>{{ producto.nombre }}</h3>
+                    <p class="precio">${{ producto.precio }}</p>
+                    <button class="btn btn-tarjeta">Agregar al carrito</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer class="footer" id="contacto">
+        <p><strong>SportZone</strong> · Bucaramanga, Colombia</p>
+        <p>contacto@sportzone.com · +57 300 000 0000</p>
+        <p class="copy">© 2026 SportZone. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
